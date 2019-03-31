@@ -18,6 +18,10 @@ function Paddle(x,y) {
     this.yv = speed;
   }
 
+  this.setY = function(y) {
+    this.y = y;
+  }
+
   this.block = function() {
     if (this.y < 0 + this.h/2) {
       this.y = this.h/2;
