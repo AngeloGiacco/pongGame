@@ -8,8 +8,6 @@ var p2scoreP;
 
 function restart() {
   ball = new Ball();
-  paddle1.x = 50;
-  paddle2.x = width - 50;
   paddle1.y = height/2;
   paddle2.y = height/2;
   createText();
