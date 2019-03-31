@@ -67,29 +67,28 @@ function draw() {
 
 function changeVel() {
   if (keyIsDown(DOWN_ARROW)) {
-    if (paddle1.yv < 0) {
-      paddle1.setVelocity(0);
+    if (paddle2.yv < 0) {
+      paddle2.setVelocity(0);
     }else {
-      paddle1.setVelocity(height/100);
+      paddle2.setVelocity(height/100);
     }
   } else if (keyIsDown(UP_ARROW)) {
-    if (paddle1.yv > 0) {
-      console.log("set to zero")
-      paddle1.setVelocity(0);
-    } else {
-      paddle1.setVelocity(-height/100);
-    }
-  } else if (keyIsDown(87)) {
     if (paddle2.yv > 0) {
       paddle2.setVelocity(0);
     } else {
       paddle2.setVelocity(-height/100);
     }
+  } else if (keyIsDown(87)) {
+    if (paddle1.yv > 0) {
+      paddle1.setVelocity(0);
+    } else {
+      paddle1.setVelocity(-height/100);
+    }
   } else if (keyIsDown(83)) {
-    if (paddle2.yv < 0) {
-      paddle2.setVelocity(0);
+    if (paddle1.yv < 0) {
+      paddle1.setVelocity(0);
     }else {
-      paddle2.setVelocity(height/100);
+      paddle1.setVelocity(height/100);
     }
   }else if (key == " ") {
     if (ball.pause) {
