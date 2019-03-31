@@ -6,6 +6,15 @@ var p2score;
 
 //must implement score function
 
+function restart() {
+  ball = new Ball();
+  paddle1.x = 50;
+  paddle2.x = width - 50;
+  paddle1.y = height/2;
+  paddle2.y = height/2;
+  createText();
+}
+
 function createText() {
   winTextPlayer1 = createP('🎉🎉🎉 PLAYER 1 WON! 🎉🎉🎉');
   winTextPlayer1.style('display', 'none');
@@ -36,11 +45,13 @@ function rebound(b,p) {
 
 function goal() {
   if (ball.x < 0) {
+    restart();
     ball.won = true;
     p2score += 1;
   } else if (ball.x > width) {
-    ball.won = true;
+    restart();
     p1score += 1;
+    ball.won = true;
   }
 }
 
@@ -104,13 +115,6 @@ function changeVel() {
   }else if (key == " ") {
     if (ball.pause) {
       ball.pause = false;
-    }else if (ball.won) {
-      ball = new Ball();
-      paddle1.x = 50;
-      paddle2.x = width - 50;
-      paddle1.y = height/2;
-      paddle2.y = height/2;
-      createText();
     }
   }
 }
