@@ -56,6 +56,7 @@ function draw() {
   paddle2.block();
   paddle2.move();
   rebound(ball,paddle1);
+  rebound(ball,paddle2);
   fill(255);
   if (ball.pause) {
     instructionText.style('display', 'block');
