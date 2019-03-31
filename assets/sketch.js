@@ -61,28 +61,30 @@ function draw() {
   } else {
     instructionText.style('display', 'none');
   }
+  changeVel();
 }
 
-function keyPressed() {
-  if (keyCode == DOWN_ARROW) {
+function changeVel() {
+  if (keyIsDown(DOWN_ARROW)) {
     if (paddle1.yv < 0) {
       paddle1.setVelocity(0);
     }else {
       paddle1.setVelocity(height/100);
     }
-  } else if (keyCode == UP_ARROW) {
+  } else if (keyIsDown(UP_ARROW)) {
     if (paddle1.yv > 0) {
+      console.log("set to zero")
       paddle1.setVelocity(0);
     } else {
       paddle1.setVelocity(-height/100);
     }
-  } else if (keyCode == 87) {
+  } else if (keyIsDown(87)) {
     if (paddle2.yv > 0) {
       paddle2.setVelocity(0);
     } else {
       paddle2.setVelocity(-height/100);
     }
-  } else if (keyCode == 83) {
+  } else if (keyIsDown(83)) {
     if (paddle2.yv < 0) {
       paddle2.setVelocity(0);
     }else {
