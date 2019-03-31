@@ -76,13 +76,13 @@ function keyPressed() {
     } else {
       paddle1.setVelocity(-height/100);
     }
-  } else if (key == "w") {
+  } else if (keyCode == 87) {
     if (paddle2.yv > 0) {
       paddle2.setVelocity(0);
     } else {
       paddle2.setVelocity(-height/100);
     }
-  } else if (key == "s") {
+  } else if (keyCode == 83) {
     if (paddle2.yv < 0) {
       paddle2.setVelocity(0);
     }else {
@@ -98,8 +98,4 @@ function keyPressed() {
       createText();
     }
   }
-}
-
-function keyReleased() { //check how this can be done with two keys pressed
-  paddle.setVelocity(0);
 }
