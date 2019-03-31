@@ -44,6 +44,7 @@ function setup() {
 
 function draw() {
   background(0);
+  ball.show();
   if (!ball.pause) {
     ball.update();
   }
