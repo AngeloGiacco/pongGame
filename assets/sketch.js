@@ -24,11 +24,11 @@ function createText() {
 function rebound(b,p) {
   if (b.x <= p.x + p.w / 2 && b.x >= p.x - p.w / 2) {
     if (b.y >= p.y - p.h/2 && b.y <= p.y + p.h/2) {
-      b.xv *= -1;
+      b.xv *= -1.05;
       if (b.y >= p.y + (p.h / 4) && b.yv <= 0) {
-        b.yv *= -1;
+        b.yv *= -1.05;
       } else if (b.y <= p.y - (p.h / 4) && b.yv >= 0) {
-        b.yv *= -1;
+        b.yv *= -1.05;
       }
     }
   }
@@ -96,8 +96,10 @@ function changeVel() {
       ball.pause = false;
     }else if (ball.won) {
       ball = new Ball();
-      paddle1 = new Paddle(50,height/2);
-      paddle2 = new Paddle(width-50, height/2);
+      paddle1.x = 50;
+      paddle2.x = width - 50;
+      paddle1.y = height/2;
+      paddle2.y = height/2;
       createText();
     }
   }
