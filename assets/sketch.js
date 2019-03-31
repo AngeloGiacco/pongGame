@@ -28,6 +28,8 @@ function createText() {
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
   instructionText.position(width / 5, 100);
+  var p1scoreDiv = createDiv('').size(100, 100);
+  var p2scoreDiv = createDiv('').size(100, 100);
 }
 
 function rebound(b,p) {
