@@ -6,8 +6,17 @@ function Ball() {
 
   this.x = width/2 - 10;
   this.y = height/2;
-  this.xv = random(-10,10);
-  this.yv = random(-10,10);
+  this.xv = random(4,7);
+  this.yv = random(4,7);
+  var change = random();
+  if (change > 0.25 && change < 0.5) {
+    this.yv *= -1;
+  } else if (change > 0.5 && change < 0.75) {
+    this.xv *= -1;
+  } else if (change > 0.75) {
+    this.yv *= -1;
+    this.xv *= -1;
+  }
   this.width = 32;
   this.height = 32;
   this.lives = 3;
