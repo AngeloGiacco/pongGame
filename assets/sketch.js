@@ -3,8 +3,8 @@ var paddle1;
 var paddle2;
 var p1score;
 var p2score;
-
-//must implement score function
+var p1scoreP;
+var p2scoreP;
 
 function restart() {
   ball = new Ball();
@@ -28,8 +28,12 @@ function createText() {
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
   instructionText.position(width / 5, 100);
-  var p1scoreDiv = createDiv('').size(100, 100);
-  var p2scoreDiv = createDiv('').size(100, 100);
+  p1scoreP = createP('Player1 Score:');
+  p1scoreP.style('color', 'red');
+  p1scoreP.position(width / 5, 125);
+  p2scoreP = createP('Player2 Score:');
+  p2scoreP.style('color', 'red');
+  p2scoreP.position(width / 5 * 4, 125);
 }
 
 function rebound(b,p) {
@@ -56,7 +60,7 @@ function goal() {
 }
 
 function setup() {
-  createCanvas(window.innerWidth - 350, 600);
+  createCanvas(window.innerWidth/5*4, window.innerHeight / 3 * 2);
   ball = new Ball();
   paddle1 = new Paddle(50,height/2);
   paddle2 = new Paddle(width-50,height/2)
@@ -88,33 +92,32 @@ function draw() {
 }
 
 function changeVel() {
-  if (keyIsDown(DOWN_ARROW)) {
-    if (paddle2.yv < 0) {
-      paddle2.setVelocity(0);
-    }else {
-      paddle2.setVelocity(height/100);
-    }
+  if (keyIsDown(DOWN_ARROW) && keyIsDown(87)) {
+    paddle1.setVelocity(-heigth/100);
+    paddle2.setVelocity(height/100);
+  } else if (keyIsDown(DOWN_ARROW) && keyIsDown(83)) {
+    paddle1.setVelocity(heigth/100);
+    paddle2.setVelocity(height/100);
+  } else if (keyIsDown(UP_ARROW) && keyIsDown(87)) {
+    paddle1.setVelocity(-heigth/100);
+    paddle2.setVelocity(-height/100);
+  } else if (keyIsDown(UP_ARROW) && keyIsDown(83)) {
+    paddle1.setVelocity(heigth/100);
+    paddle2.setVelocity(-height/100);
+  } else if (keyIsDown(DOWN_ARROW)) {
+    paddle1.setVelocity(0);
+    paddle2.setVelocity(height/100);
   } else if (keyIsDown(UP_ARROW)) {
-    if (paddle2.yv > 0) {
-      paddle2.setVelocity(0);
-    } else {
-      paddle2.setVelocity(-height/100);
-    }
+    paddle1.setVelocity(0);
+    paddle2.setVelocity(-height/100);
   } else if (keyIsDown(87)) {
-    if (paddle1.yv > 0) {
-      paddle1.setVelocity(0);
-    } else {
-      paddle1.setVelocity(-height/100);
-    }
+    paddle1.setVelocity(-heigth/100);
+    paddle2.setVelocity(0);
   } else if (keyIsDown(83)) {
-    if (paddle1.yv < 0) {
-      paddle1.setVelocity(0);
-    }else {
-      paddle1.setVelocity(height/100);
-    }
-  }else if (key == " ") {
-    if (ball.pause) {
-      ball.pause = false;
-    }
+    paddle1.setVelocity(heigth/100);
+    paddle2.setVelocity(0);
+  } else {
+    paddle1.setVelocity(0);
+    paddle2.setVelocity(0);
   }
 }

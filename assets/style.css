@@ -4,7 +4,6 @@ body {
   text-align:center;
 }
 canvas {
-  display: block;
   margin: 2% auto;
   box-shadow: 1px 3px 36px 5px rgba(0,0,0,0.75);
   border: 5px solid red;
