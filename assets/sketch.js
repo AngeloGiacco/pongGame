@@ -34,6 +34,16 @@ function rebound(b,p) {
   }
 }
 
+function goal() {
+  if (ball.x < 0) {
+    ball.won = true;
+    p2score += 1;
+  } else if (ball.x > width) {
+    ball.won = true;
+    p1score += 1;
+  }
+}
+
 function setup() {
   createCanvas(window.innerWidth - 350, 600);
   ball = new Ball();
