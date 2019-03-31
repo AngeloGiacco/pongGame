@@ -46,12 +46,10 @@ function rebound(b,p) {
 function goal() {
   if (ball.x < 0) {
     restart();
-    ball.won = true;
     p2score += 1;
   } else if (ball.x > width) {
     restart();
     p1score += 1;
-    ball.won = true;
   }
 }
 
