@@ -37,7 +37,8 @@ function rebound(b,p) {
 function setup() {
   createCanvas(window.innerWidth - 350, 600);
   ball = new Ball();
-  paddle = new Paddle(50,height/2);
+  paddle1 = new Paddle(50,height/2);
+  paddle2 = new Paddle(width-50,height/2)
   createText();
 }
 
