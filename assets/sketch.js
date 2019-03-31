@@ -1,6 +1,8 @@
 var ball;
 var paddle1;
 var paddle2;
+var p1score;
+var p2score;
 
 //must implement score function
 
