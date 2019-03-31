@@ -1,15 +1,15 @@
 var ball;
 var paddle1;
 var paddle2;
-var p1score;
-var p2score;
+var p1score = 0;
+var p2score = 0;
 var p1scoreP;
 var p2scoreP;
 
 function restart() {
   ball = new Ball();
-  paddle1.y = height/2;
-  paddle2.y = height/2;
+  paddle1.setY(height/2);
+  paddle2.setY(height/2);
   createText();
 }
 
@@ -87,6 +87,8 @@ function draw() {
   }
   changeVel();
   goal();
+  p1scoreP.html("Player1 score: "+p1score.toString());
+  p2scoreP.html("Player2 score: "+p2score.toString());
 }
 
 function changeVel() {
