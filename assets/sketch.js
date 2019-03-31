@@ -93,16 +93,16 @@ function draw() {
 
 function changeVel() {
   if (keyIsDown(DOWN_ARROW) && keyIsDown(87)) {
-    paddle1.setVelocity(-heigth/100);
+    paddle1.setVelocity(-height/100);
     paddle2.setVelocity(height/100);
   } else if (keyIsDown(DOWN_ARROW) && keyIsDown(83)) {
-    paddle1.setVelocity(heigth/100);
+    paddle1.setVelocity(height/100);
     paddle2.setVelocity(height/100);
   } else if (keyIsDown(UP_ARROW) && keyIsDown(87)) {
-    paddle1.setVelocity(-heigth/100);
+    paddle1.setVelocity(-height/100);
     paddle2.setVelocity(-height/100);
   } else if (keyIsDown(UP_ARROW) && keyIsDown(83)) {
-    paddle1.setVelocity(heigth/100);
+    paddle1.setVelocity(height/100);
     paddle2.setVelocity(-height/100);
   } else if (keyIsDown(DOWN_ARROW)) {
     paddle1.setVelocity(0);
@@ -111,10 +111,10 @@ function changeVel() {
     paddle1.setVelocity(0);
     paddle2.setVelocity(-height/100);
   } else if (keyIsDown(87)) {
-    paddle1.setVelocity(-heigth/100);
+    paddle1.setVelocity(-height/100);
     paddle2.setVelocity(0);
   } else if (keyIsDown(83)) {
-    paddle1.setVelocity(heigth/100);
+    paddle1.setVelocity(height/100);
     paddle2.setVelocity(0);
   } else {
     paddle1.setVelocity(0);
