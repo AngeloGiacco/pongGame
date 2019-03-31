@@ -24,7 +24,7 @@ function createText() {
   winTextPlayer2.style('display', 'none');
   winTextPlayer2.style('color', 'red');
   winTextPlayer2.position(width / 2 - 150, 100);
-  instructionText = createP("Press b to Start, press up or down/w or s arrow to move");
+  instructionText = createP("Press space to Start, press up or down/w or s arrow to move");
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
   instructionText.position(width / 5, 100);
