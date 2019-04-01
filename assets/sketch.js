@@ -81,6 +81,11 @@ function draw() {
   goal();
   document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
   document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
+  if (p1score == 5) {
+    winTextPlayer1.style('display', 'block');
+  } else if (p2score == 5) {
+    winTextPlayer2.style('display', 'none');
+  }
 }
 
 function changeVel() {
