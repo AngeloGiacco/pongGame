@@ -26,12 +26,6 @@ function createText() {
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
   instructionText.position(width / 5, 100);
-  p1scoreP = createP('Player1 Score:');
-  p1scoreP.style('color', 'red');
-  p1scoreP.position(width / 5, 125);
-  p2scoreP = createP('Player2 Score:');
-  p2scoreP.style('color', 'red');
-  p2scoreP.position(width / 5 * 4, 125);
 }
 
 function rebound(b,p) {
