@@ -25,6 +25,10 @@ function createText() {
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
   instructionText.position(width / 5, 125);
+  restartText = createP("Press enter to restart");
+  restartText.style('display', 'none');
+  restartText.style('color', 'red');
+  restartText.position(width / 3, 125);
 }
 
 function rebound(b,p) {
