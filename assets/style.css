@@ -17,8 +17,10 @@ canvas {
   color: red;
 }
 #player1score {
-  float:left;
+  float: left;
+  margin-left: 15%;
 }
 #player2score{
-  float:right;
+  float: right;
+  margin-right: 15%;
 }
