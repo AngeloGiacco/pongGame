@@ -19,7 +19,6 @@ function Ball() {
   }
   this.width = 32;
   this.height = 32;
-  this.lives = 3;
   this.pause = true;
 
   this.show = function() {
