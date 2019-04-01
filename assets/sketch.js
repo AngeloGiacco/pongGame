@@ -59,35 +59,37 @@ function setup() {
 }
 
 function draw() {
-  background(0);
-  ball.show();
-  if (!ball.pause) {
-    ball.update();
-  }
-  ball.bounce();
-  paddle1.show();
-  paddle1.block();
-  paddle1.move();
-  paddle2.show();
-  paddle2.block();
-  paddle2.move();
-  rebound(ball,paddle1);
-  rebound(ball,paddle2);
-  if (ball.pause) {
-    instructionText.style('display', 'block');
-  } else {
-    instructionText.style('display', 'none');
-  }
-  changeVel();
-  goal();
-  document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
-  document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
-  if (p1score == 5) {
-    winTextPlayer1.style('display', 'block');
-    won = true;
-  } else if (p2score == 5) {
-    winTextPlayer2.style('display', 'none');
-    won = true;
+  if (!won) {
+    background(0);
+    ball.show();
+    if (!ball.pause) {
+      ball.update();
+    }
+    ball.bounce();
+    paddle1.show();
+    paddle1.block();
+    paddle1.move();
+    paddle2.show();
+    paddle2.block();
+    paddle2.move();
+    rebound(ball,paddle1);
+    rebound(ball,paddle2);
+    if (ball.pause) {
+      instructionText.style('display', 'block');
+    } else {
+      instructionText.style('display', 'none');
+    }
+    changeVel();
+    goal();
+    document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
+    document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
+    if (p1score == 5) {
+      winTextPlayer1.style('display', 'block');
+      won = true;
+    } else if (p2score == 5) {
+      winTextPlayer2.style('display', 'none');
+      won = true;
+    }
   }
 }
 
