@@ -3,9 +3,6 @@ var paddle1;
 var paddle2;
 var p1score = 0;
 var p2score = 0;
-//get element by ID playerscore whatever and then change the scores in the draw function
-var p1scoreP;
-var p2scoreP;
 
 function restart() {
   ball = new Ball();
@@ -82,8 +79,8 @@ function draw() {
   }
   changeVel();
   goal();
-  p1scoreP.html("Player1 score: "+p1score.toString());
-  p2scoreP.html("Player2 score: "+p2score.toString());
+  document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
+  document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
 }
 
 function changeVel() {
