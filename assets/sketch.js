@@ -90,6 +90,8 @@ function draw() {
       winTextPlayer2.style('display', 'none');
       won = true;
     }
+  } else {
+    //show restart text and include restart function in key pressed
   }
 }
 
