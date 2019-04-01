@@ -87,7 +87,7 @@ function draw() {
       winTextPlayer1.style('display', 'block');
       won = true;
     } else if (p2score == 5) {
-      winTextPlayer2.style('display', 'none');
+      winTextPlayer2.style('display', 'block');
       won = true;
     }
   } else {
