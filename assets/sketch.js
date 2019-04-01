@@ -13,14 +13,14 @@ function restart() {
 }
 
 function createText() {
-  winTextPlayer1 = createP('🎉🎉🎉 PLAYER 1 WON! 🎉🎉🎉');
+  winTextPlayer1 = createP('🎉 PLAYER 1 WON!🎉');
   winTextPlayer1.style('display', 'none');
   winTextPlayer1.style('color', 'red');
-  winTextPlayer1.position(width / 2 - 150, 125);
-  winTextPlayer2 = createP('🎉🎉🎉 PLAYER 2 WON! 🎉🎉🎉');
+  winTextPlayer1.position(width / 2, 125);
+  winTextPlayer2 = createP('🎉PLAYER 2 WON!🎉');
   winTextPlayer2.style('display', 'none');
   winTextPlayer2.style('color', 'red');
-  winTextPlayer2.position(width / 2 - 150, 125);
+  winTextPlayer2.position(width /2, 125);
   instructionText = createP("Press space to Start, press up or down/w or s arrow to move");
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
@@ -84,9 +84,15 @@ function draw() {
     document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
     document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
     if (p1score == 5) {
+      background(0);
+      paddle1.show();
+      paddle2.show();
       winTextPlayer1.style('display', 'block');
       won = true;
     } else if (p2score == 5) {
+      background(0);
+      paddle1.show();
+      paddle2.show();
       winTextPlayer2.style('display', 'block');
       won = true;
     }
