@@ -84,8 +84,10 @@ function draw() {
   document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
   if (p1score == 5) {
     winTextPlayer1.style('display', 'block');
+    won = true;
   } else if (p2score == 5) {
     winTextPlayer2.style('display', 'none');
+    won = true;
   }
 }
 
