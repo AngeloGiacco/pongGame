@@ -3,6 +3,7 @@ var paddle1;
 var paddle2;
 var p1score = 0;
 var p2score = 0;
+var won = false;
 
 function restart() {
   ball = new Ball();
