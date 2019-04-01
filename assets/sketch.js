@@ -15,15 +15,15 @@ function createText() {
   winTextPlayer1 = createP('🎉🎉🎉 PLAYER 1 WON! 🎉🎉🎉');
   winTextPlayer1.style('display', 'none');
   winTextPlayer1.style('color', 'red');
-  winTextPlayer1.position(width / 2 - 150, 100);
+  winTextPlayer1.position(width / 2 - 150, 125);
   winTextPlayer2 = createP('🎉🎉🎉 PLAYER 2 WON! 🎉🎉🎉');
   winTextPlayer2.style('display', 'none');
   winTextPlayer2.style('color', 'red');
-  winTextPlayer2.position(width / 2 - 150, 100);
+  winTextPlayer2.position(width / 2 - 150, 125);
   instructionText = createP("Press space to Start, press up or down/w or s arrow to move");
   instructionText.style('display', 'none');
   instructionText.style('color', 'red');
-  instructionText.position(width / 5, 100);
+  instructionText.position(width / 5, 125);
 }
 
 function rebound(b,p) {
