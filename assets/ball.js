@@ -6,8 +6,8 @@ function Ball() {
 
   this.x = width/2 - 10;
   this.y = height/2;
-  this.xv = random(4,7);
-  this.yv = random(4,7);
+  this.xv = random(6,10);
+  this.yv = random(6,10);
   var change = random();
   if (change > 0.25 && change < 0.5) {
     this.yv *= -1;
