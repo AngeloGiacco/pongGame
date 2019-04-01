@@ -3,6 +3,7 @@ var paddle1;
 var paddle2;
 var p1score = 0;
 var p2score = 0;
+//get element by ID playerscore whatever and then change the scores in the draw function
 var p1scoreP;
 var p2scoreP;
 
