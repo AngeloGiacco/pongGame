@@ -13,3 +13,12 @@ canvas {
 	right: 0;
 	top: 0;
 }
+.warning{
+  color: red;
+}
+#player1score {
+  float:left;
+}
+#player2score{
+  float:right;
+}
