@@ -87,13 +87,13 @@ function draw() {
     goal();
     document.getElementById("player1score").innerHTML = "Player1 score: "+p1score.toString();
     document.getElementById("player2score").innerHTML = "Player2 score: "+p2score.toString();
-    if (p1score == 1) {
+    if (p1score == 5) {
       background(0);
       paddle1.show();
       paddle2.show();
       winTextPlayer1.style('display', 'block');
       won = true;
-    } else if (p2score == 1) {
+    } else if (p2score == 5) {
       background(0);
       paddle1.show();
       paddle2.show();
