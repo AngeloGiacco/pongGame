@@ -28,7 +28,7 @@ function createText() {
   restartText = createP("Press enter to restart");
   restartText.style('display', 'none');
   restartText.style('color', 'red');
-  restartText.position(width / 3, 125);
+  restartText.position(width / 2, 180);
 }
 
 function rebound(b,p) {
