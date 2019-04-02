@@ -138,3 +138,13 @@ function changeVel() {
     paddle2.setVelocity(0);
   }
 }
+
+function keyPressed() {
+  if (keyCode == ENTER && won == true) {
+    p1score = 0;
+    p2score = 0;
+    won = false;
+    restartText.style("display","none");
+    restart();
+  }
+}
