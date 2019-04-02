@@ -145,6 +145,8 @@ function keyPressed() {
     p2score = 0;
     won = false;
     restartText.style("display","none");
+    winTextPlayer1.style('display', 'none');
+    winTextPlayer2.style('display', 'none');
     restart();
   }
 }
